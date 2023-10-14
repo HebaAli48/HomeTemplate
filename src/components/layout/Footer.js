@@ -18,7 +18,7 @@ const Footer = () => {
       title: "أستفسارات",
       description:
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا ",
-      buttonTitle: "تـواصـلو معنا",
+      buttonTitle: "تواصـلو معنا",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const Footer = () => {
       title: "أخر الأخبار",
       description:
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا ",
-      buttonTitle: "تقـويم الشهر",
+      buttonTitle: "تقويم الشهر",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const Footer = () => {
       title: "المكتبه",
       description:
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا ",
-      buttonTitle: "تسـجيل دخـول",
+      buttonTitle: "تسجيل دخول",
     },
   ];
   return (
@@ -69,7 +69,7 @@ const Footer = () => {
                 <Link to="/">{data.title}</Link>{" "}
               </span>
               <p className="text-xs ">{data.description}</p>
-              <ContactUsButton className="mt-5 w-fit text-sm sm:text-base ">
+              <ContactUsButton className="mt-5 w-fit text-sm sm:text-[13px] lg:text-[14px] ">
                 {data.buttonTitle}
               </ContactUsButton>
             </div>
