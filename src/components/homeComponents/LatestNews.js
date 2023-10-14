@@ -5,9 +5,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
+
 import { WarningSign } from "../../utils/Icons";
 import TitleOfComponent from "../UI/TitleOfComponent";
 
@@ -51,31 +49,35 @@ const LatestNews = () => {
           className="w-[80%] shadow-md mx-auto mt-5 mb-5"
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={40}
-          slidesPerView={1.2}
+          slidesPerView={1.3}
+          centeredSlides={true}
           grabCursor={true}
           pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
           {latestNewsSlider.map((data, index) => (
-            <SwiperSlide className="py-8" key={index}>
+            <SwiperSlide className=" py-3 sm:py-8" key={index}>
               <div className=" mx-auto   ">
-                <div className="bg-white rounded-[30px] border border-t-[1px] mb-7 shadow-xl flex p-10">
+                {/* card */}
+                <div className="bg-white w-full rounded-[30px] border border-t-[1px] mb-4 sm:mb-7 shadow-xl flex flex-col md:flex-row items-center py-4 sm:py-10 px-10">
+                  {/* image */}
                   <img
-                    className="object-cover w-full rounded-ss-[80px] rounded-se-[80px] rounded-es-[50px] rounded-ee-[50px]   h-[250px] md:w-48 "
+                    className="object-cover w-full h-32 xs:h-48 sm:h-[250px] md:w-48 rounded-ss-[80px] rounded-se-[80px] rounded-es-[50px] rounded-ee-[50px]   "
                     src="https://media.istockphoto.com/id/1278979697/photo/group-of-high-school-students-using-laptop-in-classroom.jpg?s=612x612&w=0&k=20&c=hWLPu8JxsFtEI8Yo4jBQGBAALFL9zh6Hdj_50GprO5s="
                     alt=""
                   />
-                  <div className="flex flex-col text-right justify-start gap-2 items-end leading-normal">
+                  {/* body */}
+                  <div className="flex flex-col text-right justify-start gap-2 items-end  leading-normal">
                     <h2 className="text-blue-800 font-semibold text-2xl">
                       عنــوان
                     </h2>
                     <h5
-                      className={`mb-4 text-lg border rounded-full px-4 py-[2px] ${data.color} w-fit   font-bold text-gray-900 `}
+                      className={`mb-2 sm:mb-4 text-lg border rounded-full px-4 py-[2px] ${data.color} w-fit   font-bold text-gray-900 `}
                     >
                       {data.title}{" "}
                     </h5>
-                    <p className="mb-3 font-normal text-gray-800 ">
+                    <p className="mb-1 sm:mb-3 font-normal text-gray-800 text-[14px] sm:text-base ">
                       {data.describtion}{" "}
                     </p>
                   </div>

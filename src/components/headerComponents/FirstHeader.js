@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const FirstHeader = () => {
   return (
     <nav className={`bg-blue-800 text-[white]  border-b rounded-b-2xl  py-3 `}>
-      <ul className="flex flex-row justify-end gap-4   items-end w-4/5 m-auto text-base">
+      <ul className="flex flex-row xs:justify-end justify-center gap-2 sm:gap-4   items-end w-4/5 m-auto text-base">
         <li className="pt-2 sm:pt-0  ">
           <NavLink
             to="/"

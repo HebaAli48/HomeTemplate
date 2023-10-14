@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const ThirdHeader = () => {
   return (
-    <nav className={`text-blue-800 bg-teal-100`}>
-      <ul className="flex flex-row  text-center justify-center  text-sm items-end w-4/5 m-auto">
+    <nav className={`text-blue-800 bg-teal-100 `}>
+      <ul className="flex flex-col sm:flex-wrap sm:flex-row  text-center items-start  sm:justify-center  text-sm sm:items-end  w-4/5 m-auto">
         <li
-          className={`px-2 py-2 w-48  rounded-b-2xl border shadow-md bg-white hover:text-white  hover:bg-red-700 hover:scale-125`}
+          className={` xl:px-12 lg:px-8 md:px-5 px-3 py-2 sm:w-fit w-32   rounded-b-2xl border shadow-md bg-white hover:text-white  hover:bg-red-700 hover:scale-125`}
         >
           <NavLink to="/" className={`py-1 transition`}>
             سيدات
@@ -14,7 +14,7 @@ const ThirdHeader = () => {
         </li>
 
         <li
-          className={`px-2 py-2 w-48  rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-teal-700 hover:scale-125`}
+          className={` xl:px-12 lg:px-8 md:px-5 px-3 py-2 sm:w-fit w-32   rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-teal-700 hover:scale-125`}
         >
           <NavLink to="/" className={`py-1 transition`}>
             كبـار السن
@@ -22,7 +22,7 @@ const ThirdHeader = () => {
         </li>
 
         <li
-          className={`px-2 py-2 w-48  rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-red-300 hover:scale-125`}
+          className={` xl:px-12 lg:px-8 md:px-5 px-3 py-2 sm:w-fit w-32   rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-red-300 hover:scale-125`}
         >
           <NavLink to="/" className={`py-1 transition`}>
             أباء و وصاه
@@ -30,7 +30,7 @@ const ThirdHeader = () => {
         </li>
 
         <li
-          className={`px-2 py-2 w-48  rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-amber-600 hover:scale-125`}
+          className={` xl:px-12 lg:px-8 md:px-5 px-3 py-2 sm:w-fit w-32   rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-amber-600 hover:scale-125`}
         >
           <NavLink to="/" className={`py-1 transition`}>
             المعلمين
@@ -38,7 +38,7 @@ const ThirdHeader = () => {
         </li>
 
         <li
-          className={`px-2 py-2 w-48  rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-purple-700 hover:scale-125`}
+          className={` xl:px-12 lg:px-8 md:px-5 px-3 py-2 sm:w-fit w-32   rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-purple-700 hover:scale-125`}
         >
           <NavLink to="/" className={`py-1 transition`}>
             شبـاب
@@ -46,7 +46,7 @@ const ThirdHeader = () => {
         </li>
 
         <li
-          className={`px-2 py-2 w-48  rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-teal-400 hover:scale-125`}
+          className={` xl:px-12 lg:px-8 md:px-5 px-3 py-2 sm:w-fit w-32   rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-teal-400 hover:scale-125`}
         >
           <NavLink to="/" className={`py-1 transition`}>
             أطفال

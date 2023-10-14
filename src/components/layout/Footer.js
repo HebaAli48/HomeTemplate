@@ -38,17 +38,18 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="footer footer-center text-right p-3 px-10 bg-teal-400 text-blue-800 border-t-[3px] border-line-primary">
-      <div className="grid grid-flow-col gap-6">
-        <div className="flex flex-col items-end">
-          <span className="link link-hover font-semibold">
+    <footer className="footer footer-center text-right p-3 px-5 sm:px-10 bg-teal-400 text-blue-800 border-t-[3px] border-line-primary">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 md:flex md:gap-5">
+        {/* followus */}
+        <div className="flex flex-col items-center sm:items-end">
+          <span className="link link-hover font-semibold text-center">
             <Link to="/">{footerData[0].title}</Link>{" "}
           </span>
           <p className="text-xs ">{footerData[0].description}</p>
-          <div className="flex flex-row gap-2 mt-5 mx-auto text-center">
+          <div className="flex flex-row gap-2 mt-5 mx-auto  justify-center  text-center">
             {footerData[0].logo.map((logo, index) => (
               <span
-                key={index} // Add a unique key for each item
+                key={index}
                 className="bg-blue-700  hover:translate-x-[-2px]  hover:bg-blue-500  rounded-ss-[80px] rounded-se-[80px] rounded-es-[50px] rounded-ee-[50px] py-3 px-2"
               >
                 {logo}
@@ -56,15 +57,19 @@ const Footer = () => {
             ))}
           </div>
         </div>
+        {/* other footer items */}
         {footerData
           .filter((data) => data.id > 0)
           .map((data) => (
-            <div key={data.id} className="flex flex-col items-end">
+            <div
+              key={data.id}
+              className="flex flex-col items-center sm:items-end"
+            >
               <span className="link link-hover font-semibold">
                 <Link to="/">{data.title}</Link>{" "}
               </span>
-              <p className="text-xs">{data.description}</p>
-              <ContactUsButton className="mt-5">
+              <p className="text-xs ">{data.description}</p>
+              <ContactUsButton className="mt-5 w-fit text-sm sm:text-base ">
                 {data.buttonTitle}
               </ContactUsButton>
             </div>

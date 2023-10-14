@@ -33,11 +33,11 @@ const WhatAreWeDoing = () => {
       {/* title */}
       <TitleOfComponent img={Users}> مـاذا نفعل</TitleOfComponent>
       {/* body */}
-      <div className="flex flex-row flex-wrap gap-3  mt-5 mx-auto ">
+      <div className="flex flex-row justify-center flex-wrap gap-3  mt-5 mx-auto ">
         {whatAreWeDoindData.map((data) => (
           <div className="flex justify-center items-center  " key={data.id}>
             {/* card */}
-            <div className="bg-white border py-3 w-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  rounded-ss-[100px] rounded-se-[100px] rounded-es-[50px] rounded-ee-[50px] px-3">
+            <div className="bg-white border py-3 w-48 xs:w-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  rounded-ss-[100px] rounded-se-[100px] rounded-es-[50px] rounded-ee-[50px] px-3">
               <h2 className="font-semibold text-blue-700">{data.title}</h2>
               <p className="text-sm mt-3">{data.describtion}</p>
               <div className="">

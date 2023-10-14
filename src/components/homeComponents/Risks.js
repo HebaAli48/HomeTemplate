@@ -69,7 +69,7 @@ const Risks = () => {
       <TitleOfComponent img={WarningSign}>تعرف على الأخطار</TitleOfComponent>
 
       <Swiper
-        className="w-full  mx-auto mt-5 "
+        className="w-full  mx-auto mt-5  "
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1} // Display one slide at a time
@@ -77,20 +77,22 @@ const Risks = () => {
       >
         {risksDataSlider.map((data, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-evenly items-center gap-5 mx-auto px-10 py-4">
+            <div className="flex justify-center sm:justify-evenly  items-center gap-3 sm:gap-5 mx-auto  px-2 xs:px-6 md:px-10 py-4">
               {data.map((slide) => (
                 <div
-                  className="flex flex-col justify-between items-center gap-3 w-44 h-56"
+                  className="flex flex-col justify-between items-center gap-2 w-12 xs:w-20 sm:w-24 md:w-32 lg:w-44 h-36 sm:h-44 md:h-44 lg:h-56"
                   key={slide.id}
                 >
-                  <div className="bg-white shadow-md rounded-md w-44 h-44">
+                  <div className="bg-white shadow-md rounded-md w-12 xs:w-20 sm:w-24 md:w-32  lg:w-44 h-12 xs:h-20  sm:h-24 md:h-32 lg:h-44">
                     <img
                       src={slide.imageUrl}
                       alt={slide.title}
-                      className="w-44 h-44 object-contain  "
+                      className="w-12 xs:w-20 sm:w-24 md:w-32  lg:w-44 h-12 xs:h-20  sm:h-24 md:h-32  lg:h-44 object-contain  "
                     />
                   </div>
-                  <div className="w-44 mb-2 text-center">{slide.title}</div>
+                  <div className="pb-16 md:pb-0  w-12 xs:w-20 sm:w-24  md:w-32 lg:w-48 mb-2 text-center  text-[12px] sm:text-base">
+                    {slide.title}
+                  </div>
                 </div>
               ))}
             </div>
