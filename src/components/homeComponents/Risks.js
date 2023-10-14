@@ -29,7 +29,8 @@ const Risks = () => {
       {
         id: 2,
         title: "الأستغلال الجنسي",
-        imageUrl: "https://www.svgrepo.com//show/243083/account.svg",
+        imageUrl:
+          "https://img.freepik.com/premium-vector/vector-illustration-security-digital-shield_714605-311.jpg?w=2000",
       },
       {
         id: 3,
@@ -59,7 +60,8 @@ const Risks = () => {
       {
         id: 7,
         title: "التنمر الألكتروني",
-        imageUrl: "https://www.staysafeonline.in/index.php?img=bullying2742",
+        imageUrl:
+          "https://img.freepik.com/premium-vector/cyber-security-concept-flat-padlock-with-password-shield-concept-personal-data-protection-vector-illustration_662353-1173.jpg",
       },
     ],
   ];
