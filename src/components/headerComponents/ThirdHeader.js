@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import { CollapsedContext } from "./../../utils/MenuContext";
 
 const ThirdHeader = () => {
-  const { isCollapsed, setIsCollapsed, isShown, setIsShown } =
-    useContext(CollapsedContext);
+  const { isCollapsed, isShown } = useContext(CollapsedContext);
   const menuData = [
     {
       id: 0,
