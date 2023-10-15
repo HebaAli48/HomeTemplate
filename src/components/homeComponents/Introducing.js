@@ -22,8 +22,8 @@ const Introducing = () => {
         <div className="flex flex-col items-end w-full justify-end">
           <h2
             className={`bg-teal-300  ${
-              !isCollapsed && isCollapsed == null ? "" : "pt-48"
-            } text-white w-fit    sm:px-2 flex items-center relative py-32 bottom-0 sm:bottom-24  z-40 sm:pt-32 sm:pb-48 rounded-bl-[40px]`}
+              !isCollapsed && isCollapsed == null ? "pt-52" : "pt-48"
+            } text-white w-fit    sm:px-2 flex items-center relative py-36 bottom-0 sm:bottom-24  z-40 sm:pt-32 sm:pb-48 rounded-bl-[40px]`}
           >
             <span className="inline-block rotate-[-90deg] pb-5s sm:pb-0 pt-auto relative sm:translate-x-0 sm:translate-y-0 translate-x-[-4px] translate-y-16">
               عـنـوان
