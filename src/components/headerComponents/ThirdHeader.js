@@ -66,7 +66,8 @@ const ThirdHeader = () => {
               </ul>
             </div>
           )}
-          {(isCollapsed == null || !isCollapsed) && (
+
+          {!isCollapsed && (
             <ul className=" hidden sm:flex flex-row flex-wrap text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end w-4/5 m-auto">
               {" "}
               {menuData.map((data) => (
