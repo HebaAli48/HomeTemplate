@@ -56,7 +56,7 @@ const ThirdHeader = () => {
                 {menuData.map((data) => (
                   <li
                     key={data.id}
-                    className={` px-3 py-2 border h-full w-full shadow-md bg-white hover:text-white hover:${data.color} hover:scale-125`}
+                    className={` px-3 py-2 border h-full w-full shadow-md  hover:text-white hover:${data.color} hover:scale-125`}
                   >
                     <NavLink to="/" className={`py-1 transition z-50`}>
                       {data.title}
@@ -66,7 +66,7 @@ const ThirdHeader = () => {
               </ul>
             </div>
           )}
-          {isCollapsed == null && isShown && (
+          {(isCollapsed == null || !isCollapsed) && (
             <ul className="flex flex-row flex-wrap text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end w-4/5 m-auto">
               {menuData.map((data) => (
                 <li
