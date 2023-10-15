@@ -8,6 +8,7 @@ import { useState } from "react";
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(null);
   const [isShown, setIsShown] = useState(true);
+
   return (
     <>
       <CollapsedContext.Provider

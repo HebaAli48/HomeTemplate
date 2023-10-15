@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
-import { Close } from "../../utils/Icons";
 import { CollapsedContext } from "./../../utils/MenuContext";
 
 const ThirdHeader = () => {

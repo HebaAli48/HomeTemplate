@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import shieldImg from "../../assets/images/introducingImg.png";
 import { CollapsedContext } from "../../utils/MenuContext";
 const Introducing = () => {
-  const { isCollapsed, setIsCollapsed, isShown, setIsShown } =
-    useContext(CollapsedContext);
+  const { isCollapsed } = useContext(CollapsedContext);
 
   return (
     <>
