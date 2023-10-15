@@ -1,86 +1,88 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
-import { Close, MenuBar } from "../../utils/Icons";
+import { Close } from "../../utils/Icons";
+import { CollapsedContext } from "./../../utils/MenuContext";
 
 const ThirdHeader = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const { isCollapsed, setIsCollapsed, isShown, setIsShown } =
+    useContext(CollapsedContext);
+  const menuData = [
+    {
+      id: 0,
+      title: "سيدات",
+      color: "bg-red-700",
+    },
+    {
+      id: 1,
+      title: "كبار السن",
+      color: "bg-teal-700",
+    },
+    {
+      id: 2,
+      title: "اباء ووصاه",
+      color: "bg-red-300",
+    },
+    {
+      id: 3,
+      title: "المعلمين",
+      color: "bg-amber-600",
+    },
+    {
+      id: 4,
+      title: "شباب",
+      color: "bg-purple-700",
+    },
+    {
+      id: 5,
+      title: "أطفال",
+      color: "bg-teal-400",
+    },
+  ];
 
   return (
-    <div className="text-blue-800 transform relative z-10 bg-teal-100">
-      <nav className={`relative z-50 text-blue-800  bg-teal-100`}>
+    <div className="text-blue-800 transform relative z-50 sm:z-10 bg-transparent">
+      <nav
+        className={`relative z-30 text-blue-800 ${
+          !isCollapsed ? "bg-teal-100" : "bg-transparent"
+        }`}
+      >
         <div className="relative z-50">
           {isCollapsed && (
-            <button
-              onClick={() => setIsCollapsed((prev) => !prev)}
-              className="block  items-center px-3 py-2 border rounded text-blue-700 border-blue-700 hover:text-blue-600 hover:border-blue-600 sm:hidden order-9"
+            <div
+              id="slide-bar"
+              className={` border border-red-500 translate-x-0 bottom-20 relative z-50 h-[75vh] w-[80w] `}
             >
-              {MenuBar}
-            </button>
+              <ul
+                className={` relative  h-full w-full pt-10 bg-white sm:flex-wrap z-50 flex flex-col gap-10 px-5 mx-auto md:px-14 py-9 rounded border border-black   m-auto text-center items-start text-[8px]`}
+              >
+                {menuData.map((data) => (
+                  <li
+                    key={data.id}
+                    className={` px-3 py-2 border h-full w-full shadow-md bg-white hover:text-white hover:${data.color} hover:scale-125`}
+                  >
+                    <NavLink to="/" className={`py-1 transition z-50`}>
+                      {data.title}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
-          <div
-            id="slide-bar"
-            className={`${
-              isCollapsed ? "translate-x-full hidden" : "translate-x-0 "
-            } transform w-fit  sm:z-0 mx-auto  z-50  h-fit  sm:w-64 sm:block sm:text-center sm:top-0 transition-transform duration-400 ease-in-out fixed   sm:right-[80vw] right-4 top-[-30px]`}
-          >
-            {!isCollapsed && (
-              <div
-                className="cursor-pointer relative  z-50 top-7 right-4 text-red-800 ms-44"
-                onClick={() => setIsCollapsed((prev) => !prev)}
-              >
-                {Close}
-              </div>
-            )}
-            <ul className="relative z-40 sm:bg-transparent bg-white sm:flex-wrap  sm:bottom-10 flex flex-col gap-2 px-5  sm:right-5 md:right-0 mx-auto md:px-14 py-9 rounded  w-fit sm:w-[80vw] m-auto  sm:gap-0 sm:flex-row text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end">
-              <li
-                className={`  px-3 py-2 w-36    rounded-b-2xl border shadow-md bg-white hover:text-white  hover:bg-red-700 hover:scale-125`}
-              >
-                <NavLink to="/" className={`py-1 transition`}>
-                  سيدات
-                </NavLink>
-              </li>
-
-              <li
-                className={`  px-3 py-2 w-36    rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-teal-700 hover:scale-125`}
-              >
-                <NavLink to="/" className={`py-1 transition`}>
-                  كبـار السن
-                </NavLink>
-              </li>
-
-              <li
-                className={`  px-3 py-2 w-36    rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-red-300 hover:scale-125`}
-              >
-                <NavLink to="/" className={`py-1 transition`}>
-                  أباء و وصاه
-                </NavLink>
-              </li>
-
-              <li
-                className={`  px-3 py-2 w-36    rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-amber-600 hover:scale-125`}
-              >
-                <NavLink to="/" className={`py-1 transition`}>
-                  المعلمين
-                </NavLink>
-              </li>
-
-              <li
-                className={`  px-3 py-2 w-36    rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-purple-700 hover:scale-125`}
-              >
-                <NavLink to="/" className={`py-1 transition`}>
-                  شبـاب
-                </NavLink>
-              </li>
-
-              <li
-                className={`  px-3 py-2 w-36    rounded-b-2xl border shadow-md bg-white hover:text-white hover:bg-teal-400 hover:scale-125`}
-              >
-                <NavLink to="/" className={`py-1 transition`}>
-                  أطفال
-                </NavLink>
-              </li>
+          {isCollapsed == null && isShown && (
+            <ul className="flex flex-row flex-wrap text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end w-4/5 m-auto">
+              {menuData.map((data) => (
+                <li
+                  key={data.id}
+                  className={` px-3 py-2 w-32  rounded-b-2xl border shadow-md bg-white hover:text-white hover:${data.color} hover:scale-125`}
+                >
+                  <NavLink to="/" className={`py-1 transition`}>
+                    {data.title}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
-          </div>
+          )}
         </div>
       </nav>
     </div>

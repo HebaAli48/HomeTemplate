@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { MenuBar } from "../../utils/Icons";
+import { CollapsedContext } from "./../../utils/MenuContext";
 
 const FirstHeader = () => {
+  const { isCollapsed, setIsCollapsed, isShown, setIsShown } =
+    useContext(CollapsedContext);
+
   return (
-    <div className="bg-white z-50 relative">
+    <div className="bg-white z-40 relative">
       <nav
         className={`bg-blue-800 text-[white]  border-b rounded-b-2xl  py-3 `}
       >
@@ -31,6 +36,19 @@ const FirstHeader = () => {
             >
               من نحن
             </NavLink>
+          </li>
+          <li className="pt-2 sm:pt-0 ">
+            <button
+              onClick={() => {
+                setIsCollapsed((prev) => !prev);
+                setIsShown((prev) => !prev);
+                console.log(isCollapsed);
+                console.log("sss", isShown);
+              }}
+              className="block  items-center px-3 py-2 border rounded  border-white hover:text-slate-400 hover:border-slate-400 sm:hidden order-9"
+            >
+              {MenuBar}
+            </button>
           </li>
         </ul>
       </nav>

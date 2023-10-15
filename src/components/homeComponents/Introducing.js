@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import shieldImg from "../../assets/images/introducingImg.png";
+import { CollapsedContext } from "../../utils/MenuContext";
 const Introducing = () => {
+  const { isCollapsed, setIsCollapsed, isShown, setIsShown } =
+    useContext(CollapsedContext);
+
   return (
     <>
-      <div className="bg-teal-100 h-[75vh] flex  flex-col   justify-center sm:flex-row  sm:justify-between ">
+      <div
+        className={`bg-teal-100 h-[75vh] flex  flex-col relative z-10  justify-center sm:flex-row  sm:justify-between ${
+          !isCollapsed ? "" : "bottom-20"
+        }`}
+      >
         <div className="w-full sm:w-[90vw] h-80    sm:order-first order-last mt-44 pb-10 sm:mt-20  mx-auto sm:py-10 relative  bottom-52 sm:bottom-0">
           <img
             src={shieldImg}
@@ -12,9 +20,13 @@ const Introducing = () => {
           />
         </div>
 
-        <div className="flex flex-col items-end justify-center">
-          <h2 className="bg-teal-300  text-white w-8 sm:w-fit  h-[4/5] sm:px-2 flex items-center relative bottom-2 sm:bottom-24  z-20 pt-32 pb-48 rounded-bl-[40px]">
-            <span className="inline-block rotate-[-90deg] translate-y-[140px]  translate-x-[-8px]  sm:translate-y-0  sm:translate-x-0 pb-5s sm:pb-0 pt-auto relative">
+        <div className="flex flex-col items-end w-full justify-end">
+          <h2
+            className={`bg-teal-300  ${
+              !isCollapsed && isCollapsed == null ? "" : "pt-48"
+            } text-white w-fit    sm:px-2 flex items-center relative py-32 bottom-0 sm:bottom-24  z-40 sm:pt-32 sm:pb-48 rounded-bl-[40px]`}
+          >
+            <span className="inline-block rotate-[-90deg] pb-5s sm:pb-0 pt-auto relative sm:translate-x-0 sm:translate-y-0 translate-x-[-4px] translate-y-16">
               عـنـوان
             </span>
           </h2>
