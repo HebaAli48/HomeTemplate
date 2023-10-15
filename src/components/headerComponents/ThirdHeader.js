@@ -48,10 +48,10 @@ const ThirdHeader = () => {
           {isCollapsed && (
             <div
               id="slide-bar"
-              className={` border border-red-500 translate-x-0 bottom-20 relative z-50 h-[75vh] w-[80w] `}
+              className={` border shadow-md rounded-b-md translate-x-0 bottom-20 relative z-50 h-[75vh] w-[80w] `}
             >
               <ul
-                className={` relative  h-full w-full pt-10 bg-white sm:flex-wrap z-50 flex flex-col gap-10 px-5 mx-auto md:px-14 py-9 rounded border border-black   m-auto text-center items-start text-[8px]`}
+                className={` relative  h-full w-full pt-10 bg-white sm:flex-wrap z-50 flex flex-col gap-10 px-5 mx-auto md:px-14 py-9 rounded border   m-auto text-center items-start text-[8px]`}
               >
                 {menuData.map((data) => (
                   <li
