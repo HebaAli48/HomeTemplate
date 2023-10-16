@@ -11,7 +11,7 @@ const FirstHeader = () => {
       <nav
         className={`bg-blue-800 text-[white]  border-b rounded-b-2xl  py-3 `}
       >
-        <ul className="flex flex-row sm:justify-end justify-between gap-2 sm:gap-4  text-center items-end w-4/5 m-auto text-[14px]  sm:text-base">
+        <ul className="flex flex-row sm:justify-end justify-between gap-2 sm:gap-4  text-center items-center w-4/5 m-auto text-[14px]  sm:text-base">
           <li className="pt-2 sm:pt-0  ">
             <NavLink
               to="/"
