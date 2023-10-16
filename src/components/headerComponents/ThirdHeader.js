@@ -45,28 +45,36 @@ const ThirdHeader = () => {
         }`}
       >
         <div className="">
-          <ul
+          <div
             className={` ${
               isCollapsed
-                ? "relative  h-full w-full bg-slate-50 transition-all ease-in-out duration-150  shadow-md  rounded-b-2xl z-50 flex flex-col gap-5 px-5 mx-auto py-5 rounded border   m-auto text-right  items-end text-[8px]"
-                : "hidden sm:flex flex-row flex-wrap text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end w-4/5 m-auto"
+                ? "bg-gradient-to-r from-teal-100 to-teal-300"
+                : "bg-transparent"
             }`}
           >
-            {menuData.map((data) => (
-              <li
-                key={data.id}
-                className={` ${
-                  isCollapsed
-                    ? "px-3 py-2 text-lg h-full w-full hover:scale-105"
-                    : "px-3 py-2 w-32  rounded-b-2xl border shadow-md bg-white  hover:scale-125"
-                } hover:${data.color}`}
-              >
-                <NavLink to="/" className={`py-1 transition z-50`}>
-                  {data.title}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+            <ul
+              className={` ${
+                isCollapsed
+                  ? "relative  h-[75vh]  w-full bg-slate-50 transition-all ease-in-out duration-150  shadow-md  rounded-b-2xl z-50 flex flex-col gap-5 px-5 mx-auto py-5 rounded border   m-auto text-right  items-end text-[8px]"
+                  : "hidden sm:flex flex-row flex-wrap text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end w-4/5 m-auto"
+              }`}
+            >
+              {menuData.map((data) => (
+                <li
+                  key={data.id}
+                  className={` ${
+                    isCollapsed
+                      ? "px-3 py-2 text-lg h-full w-full hover:scale-105"
+                      : "px-3 py-2 w-32  rounded-b-2xl border shadow-md bg-white  hover:scale-125"
+                  } hover:${data.color}`}
+                >
+                  <NavLink to="/" className={`py-1 transition z-50`}>
+                    {data.title}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
