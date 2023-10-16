@@ -1,6 +1,6 @@
 # Home Template
 
-A simple React-based template for building home or landing page websites.
+A RESPONSIVE simple React-based template for building home or landing page websites.
 
 ## Table of Contents
 
