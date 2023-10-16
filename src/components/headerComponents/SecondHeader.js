@@ -8,9 +8,15 @@ const SecondHeader = () => {
   const { isCollapsed } = useContext(CollapsedContext);
 
   return (
-    <div className="bg-gradient-to-r from-teal-100 to-teal-300 z-40 relative">
+    <div
+      className={`${
+        isCollapsed
+          ? "bg-slate-50"
+          : "bg-gradient-to-r from-teal-100 to-teal-300"
+      } z-40 relative`}
+    >
       <nav
-        className={`shadow-md text-[white]  z-40 relative bg-white border-b rounded-b-[30px]  py-3 `}
+        className={`sm:shadow-md text-[white]  z-40 relative bg-white border-b rounded-b-[30px]  py-3 `}
       >
         <div
           className={`${
