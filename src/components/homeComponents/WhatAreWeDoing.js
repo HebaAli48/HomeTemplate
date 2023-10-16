@@ -8,7 +8,7 @@ const WhatAreWeDoing = () => {
       id: 0,
       title: "التشـبـيك",
       describtion:
-        "وريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت",
+        "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت",
       imageUrl:
         "https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-team-communication-icon-communication-illustrations-vector-vector-png-image_38007878.png",
     },
@@ -16,7 +16,7 @@ const WhatAreWeDoing = () => {
       id: 1,
       title: "تدريب",
       describtion:
-        "وريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت",
+        "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت",
       imageUrl:
         "https://png.pngtree.com/png-vector/20220520/ourmid/pngtree-instructions-to-use-the-vector-icon-png-image_4638887.png",
     },
@@ -24,7 +24,7 @@ const WhatAreWeDoing = () => {
       id: 2,
       title: "معرفة",
       describtion:
-        "وريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت",
+        "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت",
       imageUrl: "https://cdn-icons-png.flaticon.com/512/8712/8712116.png",
     },
   ];
@@ -39,7 +39,7 @@ const WhatAreWeDoing = () => {
             {/* card */}
             <div className="bg-white border py-3 w-48 xs:w-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  rounded-ss-[100px] rounded-se-[100px] rounded-es-[50px] rounded-ee-[50px] px-3">
               <h2 className="font-semibold text-blue-700">{data.title}</h2>
-              <p className="text-sm mt-3">{data.describtion}</p>
+              <p className="text-sm mt-3 text-right">{data.describtion}</p>
               <div className="">
                 <img src={data.imageUrl} alt={data.title} className="w-24" />
               </div>

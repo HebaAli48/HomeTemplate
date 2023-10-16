@@ -53,8 +53,6 @@ const LatestNews = () => {
           centeredSlides={true}
           grabCursor={true}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           {latestNewsSlider.map((data, index) => (
             <SwiperSlide className=" py-3 sm:py-8" key={index}>

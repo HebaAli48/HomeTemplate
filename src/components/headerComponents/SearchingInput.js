@@ -9,7 +9,7 @@ const SearchingInput = () => {
           <div className="flex">
             <div className="relative w-full">
               <div className="absolute top-0 p-2.5 text-sm font-medium text-white">
-                <button className="rounded-2xl px-3 py-[1px] bg-teal-400">
+                <button className="rounded-2xl px-3 py-[1px] bg-teal-400 hidden xxs:block">
                   أبحث
                 </button>
                 <span className="sr-only">Search</span>

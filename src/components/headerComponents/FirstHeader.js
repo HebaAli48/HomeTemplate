@@ -4,15 +4,14 @@ import { MenuBar } from "../../utils/Icons";
 import { CollapsedContext } from "./../../utils/MenuContext";
 
 const FirstHeader = () => {
-  const { isCollapsed, setIsCollapsed, isShown, setIsShown } =
-    useContext(CollapsedContext);
+  const { setIsCollapsed } = useContext(CollapsedContext);
 
   return (
     <div className="bg-white z-40 relative">
       <nav
         className={`bg-blue-800 text-[white]  border-b rounded-b-2xl  py-3 `}
       >
-        <ul className="flex flex-row xs:justify-end justify-center gap-2 sm:gap-4   items-end w-4/5 m-auto text-base">
+        <ul className="flex flex-row sm:justify-end justify-between gap-2 sm:gap-4  text-center items-end w-4/5 m-auto text-[14px]  sm:text-base">
           <li className="pt-2 sm:pt-0  ">
             <NavLink
               to="/"
@@ -41,11 +40,8 @@ const FirstHeader = () => {
             <button
               onClick={() => {
                 setIsCollapsed((prev) => !prev);
-                setIsShown((prev) => !prev);
-                console.log(isCollapsed);
-                console.log("sss", isShown);
               }}
-              className="block  items-center px-3 py-2 border rounded  border-white hover:text-slate-400 hover:border-slate-400 sm:hidden order-9"
+              className="block  items-center px-2 py-2 border rounded  border-white hover:text-teal-400 hover:border-teal-400 sm:hidden order-9"
             >
               {MenuBar}
             </button>

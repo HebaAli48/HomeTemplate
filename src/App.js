@@ -7,13 +7,10 @@ import { useState } from "react";
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(null);
-  const [isShown, setIsShown] = useState(true);
 
   return (
     <>
-      <CollapsedContext.Provider
-        value={{ isCollapsed, setIsCollapsed, isShown, setIsShown }}
-      >
+      <CollapsedContext.Provider value={{ isCollapsed, setIsCollapsed }}>
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />

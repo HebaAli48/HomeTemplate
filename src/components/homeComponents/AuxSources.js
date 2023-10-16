@@ -69,7 +69,7 @@ const AuxSources = () => {
             {/* image */}
             <div className="w-full shadow-sm md:w-80  ">
               <img
-                class=" w-[100%]  h-56"
+                className=" w-[100%]  h-56"
                 src={data.imageUrl}
                 alt={data.title}
               />
