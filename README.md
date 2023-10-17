@@ -8,7 +8,7 @@ A RESPONSIVE simple React-based template for building home or landing page websi
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technology Used](#technologyUsed)
+- [Technology Used](#technology-used)
 - [Scripts](#scripts)
 
 ## Description
