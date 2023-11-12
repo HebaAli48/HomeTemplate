@@ -61,7 +61,7 @@ const ThirdHeader = () => {
             <ul
               className={` ${
                 isCollapsed
-                  ? "relative  h-[75vh]  w-full bg-slate-50 transition-all ease-in-out duration-500  shadow-md  rounded-b-2xl z-50 flex flex-col  gap-5 px-5 mx-auto py-5  border-b-[1px]    m-auto text-right  items-end text-[8px]"
+                  ? "relative  h-fit  w-full bg-slate-50 transition-all ease-in-out duration-500  shadow-md  rounded-b-2xl z-50 flex flex-col  gap-3 px-5 mx-auto py-5  border-b-[1px]    m-auto text-right  items-end text-[8px]"
                   : "hidden sm:flex flex-row flex-wrap text-center items-start sm:justify-center text-[8px] sm:text-sm sm:items-end w-4/5 m-auto"
               }`}
             >

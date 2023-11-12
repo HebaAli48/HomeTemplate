@@ -61,7 +61,7 @@ const LatestNews = () => {
                 {/* card */}
                 <div className="bg-white w-full rounded-[30px] border border-t-[1px] mb-4 sm:mb-7 shadow-xl flex flex-col md:flex-row items-center py-4 sm:py-10 px-10">
                   {/* image */}
-                  <Shield className="h-[300px] w-[300px] border border-slate-50  shadow-lg overflow-hidden">
+                  <Shield className="w-32 h-32 xs:w-48 xs:h-48 sm:w-56 sm:h-56 md:h-[300px] md:w-[300px] border border-slate-50  shadow-lg overflow-hidden">
                     <img
                       className=" object-cover w-full h-full   "
                       src="https://media.istockphoto.com/id/1278979697/photo/group-of-high-school-students-using-laptop-in-classroom.jpg?s=612x612&w=0&k=20&c=hWLPu8JxsFtEI8Yo4jBQGBAALFL9zh6Hdj_50GprO5s="
@@ -69,8 +69,8 @@ const LatestNews = () => {
                     />
                   </Shield>
                   {/* body */}
-                  <div className="flex flex-col text-right justify-start gap-2 items-end  w-[70%]">
-                    <h2 className="text-blue-800 font-semibold text-2xl">
+                  <div className="flex flex-col text-right justify-start gap-2 items-center sm:items-end  w-[70%]">
+                    <h2 className="text-blue-800 font-semibold text-xl xs:text-2xl">
                       عنــوان
                     </h2>
                     <h5

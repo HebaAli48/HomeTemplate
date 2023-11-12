@@ -1,6 +1,7 @@
 import React from "react";
 import TitleOfComponent from "../UI/TitleOfComponent";
-import { RightArrow, AuxSource } from "../../utils/Icons";
+import { LeftArrow, AuxSource } from "../../utils/Icons";
+import Shield from "./../UI/Shield";
 
 const AuxSources = () => {
   const AuxsourcesData = [
@@ -11,16 +12,20 @@ const AuxSources = () => {
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت اني لابورأس نيسي يت أليكيوب",
       imageUrl:
         "https://assets.thehansindia.com/h-upload/2022/06/14/1297807-helpage-india.webp",
-      color: "bg-sky-300",
-      hoveredcolor: "hover:bg-sky-300",
+
+      textColor: "text-sky-300",
+      bgcolor: "bg-sky-300",
+      hoveredcolor: "hover:bg-sky-400",
     },
     {
       id: 1,
       title: "استشاره الأباء",
       describtion:
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت اني لابورأس نيسي يت أليكيوب",
-      color: "bg-red-300",
-      hoveredcolor: "hover:bg-red-300",
+
+      textColor: "text-red-300",
+      bgcolor: "bg-red-300",
+      hoveredcolor: "hover:bg-red-400",
       imageUrl:
         "https://www.deutschland.de/sites/default/files/styles/image_carousel_mobile/public/media/image/tdt_15052020_wie_familien_in_deutschland_leben_gemeinsam.jpg?itok=1KaBjDjQ",
     },
@@ -29,8 +34,10 @@ const AuxSources = () => {
       title: "شباب",
       describtion:
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت اني لابورأس نيسي يت أليكيوب",
-      color: "bg-purple-600",
-      hoveredcolor: "hover:bg-purple-600",
+
+      textColor: "text-purple-600",
+      bgcolor: "bg-purple-600",
+      hoveredcolor: "hover:bg-purple-700",
       imageUrl:
         "https://www3.erie.gov/syep/sites/www3.erie.gov.syep/files/2021-10/kids-hanging-out.jpg",
     },
@@ -39,8 +46,10 @@ const AuxSources = () => {
       title: "أمان الأطفال",
       describtion:
         "لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت اني لابورأس نيسي يت أليكيوب",
-      color: "bg-blue-300",
-      hoveredcolor: "hover:bg-blue-300",
+
+      textColor: "text-blue-300",
+      bgcolor: "bg-blue-300",
+      hoveredcolor: "hover:bg-blue-400",
       imageUrl:
         "https://www.hopkinsmedicine.org/-/media/images/health/3_-wellness/kids-and-teens-health/kidsgroupschool_contentimage.jpg?h=358&iar=0&mh=360&mw=520&w=520&hash=EF2CF8626E5DA2582CC56FD48D4B2B90",
     },
@@ -53,7 +62,7 @@ const AuxSources = () => {
           // card
           <div
             key={data.id}
-            className={`${data.color} flex w-full  flex-col md:flex-row sm:w-[420px] items-center  justify-between  gap-2 border border-gray-200 rounded-ss-[35px] shadow hover:bg-gray-300 hover:bg-opacity-95 hover:text-slate-800  `}
+            className={`${data.bgcolor} flex w-full  flex-col md:flex-row sm:w-[420px] items-center  justify-between  gap-2 border border-gray-200 rounded-ss-[35px] shadow ${data.hoveredcolor} hover:bg-opacity-95 hover:text-slate-800  `}
           >
             <div className=" flex flex-col w-full md:w-2/3 px-4   p-1 pt-3 leading-normal">
               {/* body */}
@@ -63,11 +72,11 @@ const AuxSources = () => {
               <p className=" text-sm font-light h-[55%] text-white">
                 {data.describtion}
               </p>
-              <footer
-                className={`rotate-180 bg-slate-200  ${data.hoveredcolor} w-fit mt-1 hover:scale-95  rounded-es-[80px] rounded-ee-[80px] rounded-ss-[50px] rounded-se-[50px] py-1 px-1`}
+              <Shield
+                className={` bg-slate-100  ${data.textColor} w-10 h-10 mt-1 hover:scale-95  py-2 px-[5px]`}
               >
-                {RightArrow}
-              </footer>
+                {LeftArrow}
+              </Shield>
             </div>
 
             {/* image */}

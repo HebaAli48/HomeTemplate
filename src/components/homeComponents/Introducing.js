@@ -27,7 +27,7 @@ const Introducing = () => {
               عـنـوان
             </span>
           </h2>
-          <p className="bg-white border w-72 px-5 pb-5 pt-7 sm:px-10 sm:pb-7 sm:pt-10 rounded-l-[35px] text-right font-light z-0 text-[9px] relative bottom-8 sm:bottom-28">
+          <p className="bg-white border w-fit sm:w-72 px-5 pb-5 pt-7 sm:px-10 sm:pb-7 sm:pt-10 rounded-l-[35px] text-right font-light z-0 text-[9px] relative bottom-8 sm:bottom-28">
             لوريم ايبسوم دولار سيت أميت كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
             أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت
             انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي

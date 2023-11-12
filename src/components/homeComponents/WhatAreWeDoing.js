@@ -38,14 +38,14 @@ const WhatAreWeDoing = () => {
         {whatAreWeDoindData.map((data) => (
           <div className="flex justify-center items-center  " key={data.id}>
             {/* card */}
-            <Shield className="bg-white border py-3 w-48 h-48 xs:w-64 xs:h-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  px-3 text-center">
+            <Shield className="bg-white border py-3 w-[12rem] h-fit   xs:w-64 xs:h-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  px-3 text-center">
               <h2 className="font-semibold text-blue-700">{data.title}</h2>
-              <p className="text-sm mt-3 text-right">{data.describtion}</p>
+              <p className="text-sm mt-3 text-right px-3">{data.describtion}</p>
               <div className="">
                 <img
                   src={data.imageUrl}
                   alt={data.title}
-                  className="w-28 mx-auto"
+                  className="w-16 xs:w-28 mx-auto"
                 />
               </div>
             </Shield>

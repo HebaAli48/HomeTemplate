@@ -5,7 +5,7 @@ import Shield from "./../UI/Shield";
 const SearchingInput = () => {
   return (
     <>
-      <div className="flex  w-[12.6rem] xs:w-full ">
+      <div className="flex  w-[14rem] sm:w-full ">
         <form className="">
           <div className="flex">
             <div className="relative w-full">

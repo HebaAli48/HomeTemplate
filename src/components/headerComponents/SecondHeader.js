@@ -29,7 +29,7 @@ const SecondHeader = () => {
         >
           <ul
             className={`
-          flex flex-col  gap-5 xs:flex-row items-baseline  xs:justify-between w-fit xs:gap-12 sm:order-first order-last   text-base`}
+          flex flex-col  gap-5 sm:flex-row items-baseline  sm:justify-between w-fit sm:gap-12 sm:order-first order-last   text-base`}
           >
             {/* signing component */}
             <li className="w-fit">
