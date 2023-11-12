@@ -8,7 +8,7 @@ const Partners = () => {
     },
     {
       title: "المجلس القومى للمرأه",
-      logo: "http://ncw.gov.eg/images/2023/11/large/181490195299202311061115591559.jpg",
+      logo: "https://mediaaws.almasryalyoum.com/news/verylarge/2021/08/08/1596973_0.jpg",
     },
     {
       title: "ITU",
