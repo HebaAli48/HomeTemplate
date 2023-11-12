@@ -13,7 +13,7 @@ A RESPONSIVE simple React-based template for building home or landing page websi
 
 ## Description
 
-This project is a boilerplate template for creating home or landing page websites using React and various libraries and tools.
+This project is a  template for creating home or landing page websites using React and various libraries and tools.
 
 ### Demo
 
