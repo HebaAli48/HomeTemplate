@@ -8,6 +8,7 @@ import "swiper/css";
 
 import { WarningSign } from "../../utils/Icons";
 import TitleOfComponent from "../UI/TitleOfComponent";
+import Shield from "./../UI/Shield";
 
 const LatestNews = () => {
   const latestNewsSlider = [
@@ -42,7 +43,7 @@ const LatestNews = () => {
   ];
   return (
     <>
-      <div className="  pt-2 pb-5 mt-12 flex flex-col   justify-evenly">
+      <div className="  pt-2 pb-5 mt-5 flex flex-col   justify-evenly">
         <TitleOfComponent img={WarningSign}>أخر الأخبار </TitleOfComponent>
 
         <Swiper
@@ -60,13 +61,15 @@ const LatestNews = () => {
                 {/* card */}
                 <div className="bg-white w-full rounded-[30px] border border-t-[1px] mb-4 sm:mb-7 shadow-xl flex flex-col md:flex-row items-center py-4 sm:py-10 px-10">
                   {/* image */}
-                  <img
-                    className="object-cover w-full h-32 xs:h-48 sm:h-[250px] md:w-48 rounded-ss-[80px] rounded-se-[80px] rounded-es-[50px] rounded-ee-[50px]   "
-                    src="https://media.istockphoto.com/id/1278979697/photo/group-of-high-school-students-using-laptop-in-classroom.jpg?s=612x612&w=0&k=20&c=hWLPu8JxsFtEI8Yo4jBQGBAALFL9zh6Hdj_50GprO5s="
-                    alt=""
-                  />
+                  <Shield className="h-[300px] w-[300px] border border-slate-50  shadow-lg overflow-hidden">
+                    <img
+                      className=" object-cover w-full h-full   "
+                      src="https://media.istockphoto.com/id/1278979697/photo/group-of-high-school-students-using-laptop-in-classroom.jpg?s=612x612&w=0&k=20&c=hWLPu8JxsFtEI8Yo4jBQGBAALFL9zh6Hdj_50GprO5s="
+                      alt=""
+                    />
+                  </Shield>
                   {/* body */}
-                  <div className="flex flex-col text-right justify-start gap-2 items-end  leading-normal">
+                  <div className="flex flex-col text-right justify-start gap-2 items-end  w-[70%]">
                     <h2 className="text-blue-800 font-semibold text-2xl">
                       عنــوان
                     </h2>

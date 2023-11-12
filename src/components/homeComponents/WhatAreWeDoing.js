@@ -1,6 +1,7 @@
 import React from "react";
 import { RightArrow, Users } from "../../utils/Icons";
 import TitleOfComponent from "../UI/TitleOfComponent";
+import Shield from "./../UI/Shield";
 
 const WhatAreWeDoing = () => {
   const whatAreWeDoindData = [
@@ -37,15 +38,19 @@ const WhatAreWeDoing = () => {
         {whatAreWeDoindData.map((data) => (
           <div className="flex justify-center items-center  " key={data.id}>
             {/* card */}
-            <div className="bg-white border py-3 w-48 xs:w-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  rounded-ss-[100px] rounded-se-[100px] rounded-es-[50px] rounded-ee-[50px] px-3">
+            <Shield className="bg-white border py-3 w-48 h-48 xs:w-64 xs:h-64  hover:border-1 shadow-xl z-10 relative hover:border-blue-700 flex flex-col justify-center items-center gap-3  px-3 text-center">
               <h2 className="font-semibold text-blue-700">{data.title}</h2>
               <p className="text-sm mt-3 text-right">{data.describtion}</p>
               <div className="">
-                <img src={data.imageUrl} alt={data.title} className="w-24" />
+                <img
+                  src={data.imageUrl}
+                  alt={data.title}
+                  className="w-28 mx-auto"
+                />
               </div>
-            </div>
+            </Shield>
             {/* icon */}
-            <div className=" relative bg-teal-300 h-12 pt-3  z-0 w-8 text-right right-3 ps-2 text-white  hover:translate-x-[5px] rounded-r-3xl">
+            <div className=" relative bg-teal-300 h-12 pt-3  z-0 w-9 text-right right-7 ps-3 text-white  hover:translate-x-[5px] rounded-r-3xl">
               {RightArrow}
             </div>
           </div>

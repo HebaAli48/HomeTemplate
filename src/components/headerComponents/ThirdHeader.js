@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { CollapsedContext } from "./../../utils/MenuContext";
 
 const ThirdHeader = () => {
   const { isCollapsed } = useContext(CollapsedContext);
+  const { pathname } = useLocation();
+
   const menuData = [
     {
       id: 0,
@@ -41,7 +43,11 @@ const ThirdHeader = () => {
     <div className="text-blue-800 h-fit  bg-transparent">
       <nav
         className={` text-blue-800  ${
-          !isCollapsed ? "bg-teal-100" : "bg-transparent"
+          isCollapsed
+            ? "bg-slate-50"
+            : pathname === "/about"
+            ? "bg-slate-50"
+            : "bg-teal-100"
         }`}
       >
         <div className="">
@@ -64,7 +70,7 @@ const ThirdHeader = () => {
                   key={data.id}
                   className={` ${
                     isCollapsed
-                      ? "px-3 pt-8 hover:shadow-md text-lg  font-medium hover:border-b-[1px] h-full w-full hover:scale-105"
+                      ? "px-3 py-4 hover:shadow-md text-lg  font-medium hover:border-b-[1px] h-full w-full hover:scale-105"
                       : "px-3 py-2 w-32  rounded-b-2xl border shadow-md bg-white  hover:scale-125"
                   } ${data.color} hover:text-white`}
                 >

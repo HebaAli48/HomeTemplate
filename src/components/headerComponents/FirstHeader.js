@@ -30,7 +30,7 @@ const FirstHeader = () => {
           </li>
           <li className="pt-2 sm:pt-0 ">
             <NavLink
-              to="/"
+              to="/about"
               className="hover:border-b-2 border-line-primary py-1 transition  hover:text-teal-400 hover:border-teal-400"
             >
               من نحن
