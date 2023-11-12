@@ -38,7 +38,7 @@ const SigningForm = () => {
       style={{ backgroundImage: `url(${backGround})` }}
       className="bg-opacity-50 bg-black "
     >
-      <section className=" ms-full  flex flex-col justify-evenly gap-8 pt-8 pb-2 w-1/3 border h-[85vh] text-center ml-auto bg-white shadow-md">
+      <section className=" ms-full  flex flex-col justify-evenly gap-8 pt-8 pb-2 w-full sm:w-2/3 lg:w-1/3 border h-[85vh] text-center ml-auto bg-white shadow-md">
         <header>Logo</header>
         <form className="" onSubmit={handleSubmit(onSubmitHandler)}>
           {/* title and user logo */}
