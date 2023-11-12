@@ -11,8 +11,8 @@ const InitiativeMechanisms = () => {
           أليات تنفيذ المبادرة
         </h2>
         <section className="w-4/5">
-          <div className="flex flex-col sm:flex-row justify-evenly items-center">
-            <p className="w-2/3  text-sm text-right">
+          <div className="flex flex-col md:flex-row justify-evenly md:gap-8 items-center">
+            <p className="md:w-2/3  text-sm text-right order-last md:order-none">
               إتاحة المعرفة المتخصصة عن مفهوم المواطنة الرقمية ومحاورها الأساسية
               وتطبيقاتها والنماذج الناجحة و تمكين المواطنين من الوصول الي
               المعلومات واستخدامها بطريقة آمنة وفعالة والاستفادة من إمكانات
@@ -34,13 +34,13 @@ const InitiativeMechanisms = () => {
                 الانترنت و المواطنة الرقمية
               </p>
             </p>
-            <Shield className="flex flex-col gap-5 items-center text-center border-[1px] shadow-md h-[230px]  w-[210px] px-5 py-3">
+            <Shield className="flex flex-col gap-7 items-center text-center border-[1px] shadow-md w-[16rem] h-[18rem] md:h-[230px]  md:w-[210px] px-5 py-3 mb-3 md:mb-0">
               <h2 className="text-blue-800 text-lg font-semibold">معرفة</h2>
               <p className="py-2 text-sm">{`${description.slice(0, 40)}`}</p>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/8712/8712116.png"
                 alt=""
-                className="w-[50%] mx-auto"
+                className="w-[50%] mx-auto mt-2"
               />
             </Shield>
           </div>
@@ -48,8 +48,8 @@ const InitiativeMechanisms = () => {
 
         <div className="bg-slate-50 ">
           <section className="w-4/5 mx-auto py-5 ">
-            <div className="flex flex-col sm:flex-row justify-evenly items-center ">
-              <Shield className="flex flex-col gap-5 items-center text-center border-[1px] shadow-md h-[230px]  w-[210px] px-5 py-3 bg-white">
+            <div className="flex flex-col md:flex-row justify-evenly md:gap-8 items-center ">
+              <Shield className="flex flex-col gap-7 items-center text-center border-[1px] shadow-md w-[16rem] h-[18rem] md:h-[230px]  md:w-[210px] px-5 py-3 mb-3 md:mb-03 bg-white">
                 <h2 className="text-blue-800 text-lg font-semibold">تدريب</h2>
                 <p className="py-2 text-sm">{`${description.slice(0, 40)}`}</p>
                 <img
@@ -58,7 +58,7 @@ const InitiativeMechanisms = () => {
                   className="w-[50%] mx-auto"
                 />
               </Shield>{" "}
-              <p className="w-2/3 text-sm text-right ">
+              <p className="md:w-2/3 text-sm text-right ">
                 - بناء قدرات المواطنين على استخدام مهارات المواطنة الرقمية من
                 خلال خدمات تدريبية وتقديم الدعم الاستشارة عبر الانترنت بالتعاون
                 مع مقدمي هذه الخدمات.
@@ -83,8 +83,8 @@ const InitiativeMechanisms = () => {
         </div>
 
         <section className="w-4/5">
-          <div className="flex flex-col sm:flex-row justify-evenly items-center">
-            <p className="w-2/3  text-sm text-right">
+          <div className="flex flex-col md:flex-row justify-evenly md:gap-8 items-center">
+            <p className="md:w-2/3  text-sm text-right order-last md:order-none">
               بناء الشراكات المحلية والدولية لتبادل الخبرات وتبني التجارب
               الناجحة.
               <h3>أليه التنفيذ:</h3>
@@ -100,7 +100,7 @@ const InitiativeMechanisms = () => {
                 للفئات المستهدفة من خلال المنصة المعرفية
               </p>
             </p>
-            <Shield className="flex flex-col gap-5 items-center text-center border-[1px] shadow-md h-[230px]  w-[210px] px-5 py-3">
+            <Shield className="flex flex-col gap-5 items-center text-center border-[1px] shadow-md w-[16rem] h-[18rem] md:h-[230px]  md:w-[210px] px-5 py-3 mb-3 md:mb-0">
               <h2 className="text-blue-800 text-lg font-semibold">تشبيك</h2>
               <p className="py-2 text-sm">{`${description.slice(0, 40)}`}</p>
               <img

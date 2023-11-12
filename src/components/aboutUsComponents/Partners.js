@@ -21,18 +21,22 @@ const Partners = () => {
   ];
   return (
     <>
-      <div className="bg-slate-50  mb-10 w-full ">
+      <div className="bg-slate-50  mb-10 w-full pb-10  ">
         <h2 className="text-blue-800 text-xl font-semibold text-center py-10 ">
           الشركاء
         </h2>
-        <div className="w-4/5 flex flex-col  sm:flex-row  justify-evenly items-center mx-auto pb-8">
+        <div className="w-4/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 sm:gap-10 lg:gap-20 mx-auto ">
           {partnersDate.map((data, index) => (
             <div
-              className="bg-white border shadow-lg rounded-2xl w-[170px] h-[170px] p-8"
+              className="bg-white border shadow-lg rounded-2xl w-[170px] h-[170px] p-8 mx-auto "
               key={index}
             >
-              <img src={data.logo} alt={data.title} className="h-[75%] pb-2" />
-              <h2 className=" border-t-[1px] py-2 text-blue-800 font-semibold text-center text-[12px]">
+              <img
+                src={data.logo}
+                alt={data.title}
+                className="h-[75%] pb-2 mx-auto"
+              />
+              <h2 className=" border-t-[1px] py-2 text-blue-800 font-semibold text-center text-[12px] w-24 ">
                 {data.title}
               </h2>
             </div>

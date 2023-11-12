@@ -40,10 +40,13 @@ const Activities = () => {
         <h2 className="text-blue-800 text-2xl  font-semibold mx-auto ">
           الأنشطة{" "}
         </h2>
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10  ">
           {activitiesData.map((data, index) => (
-            <div key={index} className="flex justify-center items-center gap-5">
-              <span className="w-36 text-right text-blue-800 text-xl font-semibold">
+            <div
+              key={index}
+              className="flex justify-center items-center gap-5 "
+            >
+              <span className="w-56 sm:w-36 text-right text-blue-800 text-xl font-semibold">
                 {data.title}
               </span>
               <Shield
