@@ -1,5 +1,6 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation } from "react-router";
+// import {  useNavigate } from "react-router";
 import { User } from "../../utils/Icons";
 import backGround from "../../assets/images/back-ground.avif";
 import Button from "../UI/Button";
@@ -13,14 +14,14 @@ const SigningForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
-    setError,
+    // reset,
+    // setError,
   } = useForm({
     resolver: yupResolver(SigningSchema),
   });
 
   //usenavigate
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { pathname } = useLocation();
   //   console.log(pathname);
